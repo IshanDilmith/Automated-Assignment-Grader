@@ -1,0 +1,4 @@
+Install Ollama + pull model: ollama pull llama3:8b (or phi3:medium if you have less RAM).
+
+pip install crewai langchain-community ollama
+pip install pandas numpy scikit-learn   # for plagiarism similarity
