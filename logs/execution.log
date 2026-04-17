@@ -56,3 +56,17 @@
 2026-04-18 00:26:09,030 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
 2026-04-18 00:26:26,806 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
 2026-04-18 00:26:26,807 - GRADE_REPORTER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 1108, 'completion_tokens': 187, 'total_tokens': 1295}
+2026-04-18 00:33:49,137 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:34:56,287 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:34:56,304 - GRADE_REPORTER_TOOL - INFO - Processing final grade for student: STU001
+2026-04-18 00:34:56,319 - GRADE_REPORTER_TOOL - INFO - Report saved for STU001 \u2192 Grade: 83.0 | Plagiarism: 41.3%
+2026-04-18 00:34:56,324 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:35:14,079 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:35:14,080 - GRADE_REPORTER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 1116, 'completion_tokens': 187, 'total_tokens': 1303}
+2026-04-18 00:46:41,672 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:47:23,764 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:47:23,774 - GRADE_REPORTER_TOOL - INFO - Processing final grade for student: STU001
+2026-04-18 00:47:23,789 - GRADE_REPORTER_TOOL - INFO - Report saved for STU001 \u2192 Grade: 83.0 | Plagiarism: 41.3%
+2026-04-18 00:47:23,793 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:47:31,887 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:47:31,888 - GRADE_REPORTER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 1108, 'completion_tokens': 83, 'total_tokens': 1191}
