@@ -10,11 +10,19 @@ similarity support.
 - `pip`
 - [Ollama](https://ollama.com/) installed and running locally
 
-After installing Ollama, pull a model:
+After installing Ollama, pull the model used by this project:
 
 ```bash
-ollama pull llama3:8b
+ollama pull qwen2.5:7b
 ```
+
+This project is configured to use:
+
+```bash
+ollama/qwen2.5:7b
+```
+
+If you need a smaller local model, you can substitute a lighter Ollama model in the agent configuration.
 
 If you have less RAM, you can use:
 

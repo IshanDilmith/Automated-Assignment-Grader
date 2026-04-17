@@ -13,7 +13,7 @@ feedback_writer_agent = Agent(
         "received a particular score and gives friendly, actionable advice on how to improve. "
         "You never invent marks. You only use the scores and rubric provided."
     ),
-    llm="ollama/llama3:8b",           # change only if team uses a different model
+    llm="ollama/qwen2.5:7b",           # change only if team uses a different model
     tools=[save_draft_feedback],      # custom tool
     verbose=True,                     # shows thinking + tool calls (great for observability)
     allow_delegation=False,
