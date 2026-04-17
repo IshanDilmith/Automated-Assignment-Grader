@@ -1,0 +1,58 @@
+2026-04-17 22:48:49,451 - GRADE_REPORTER_TOOL - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-17 22:48:53,778 - GRADE_REPORTER_TOOL - Retrying request to /chat/completions in 0.496464 seconds
+2026-04-17 22:48:58,332 - GRADE_REPORTER_TOOL - Retrying request to /chat/completions in 0.821798 seconds
+2026-04-17 22:49:03,214 - GRADE_REPORTER_TOOL - Failed to connect to OpenAI API: Connection error.
+2026-04-17 22:49:03,218 - GRADE_REPORTER_TOOL - OpenAI API call failed: Failed to connect to OpenAI API: Connection error.
+2026-04-17 22:49:03,238 - GRADE_REPORTER_TOOL - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-17 22:49:07,319 - GRADE_REPORTER_TOOL - Retrying request to /chat/completions in 0.377969 seconds
+2026-04-17 22:49:11,792 - GRADE_REPORTER_TOOL - Retrying request to /chat/completions in 0.942151 seconds
+2026-04-17 22:49:16,779 - GRADE_REPORTER_TOOL - Failed to connect to OpenAI API: Connection error.
+2026-04-17 22:49:16,781 - GRADE_REPORTER_TOOL - OpenAI API call failed: Failed to connect to OpenAI API: Connection error.
+2026-04-17 22:49:16,825 - GRADE_REPORTER_TOOL - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-17 22:49:20,937 - GRADE_REPORTER_TOOL - Retrying request to /chat/completions in 0.450218 seconds
+2026-04-17 22:49:25,480 - GRADE_REPORTER_TOOL - Retrying request to /chat/completions in 0.801467 seconds
+2026-04-17 22:49:30,348 - GRADE_REPORTER_TOOL - Failed to connect to OpenAI API: Connection error.
+2026-04-17 22:49:30,350 - GRADE_REPORTER_TOOL - OpenAI API call failed: Failed to connect to OpenAI API: Connection error.
+2026-04-17 23:37:22,377 - GRADE_REPORTER_TOOL - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-17 23:37:25,490 - GRADE_REPORTER_TOOL - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-17 23:37:25,492 - GRADE_REPORTER_TOOL - OpenAI API call failed: Error code: 400 - {'error': {'message': 'registry.ollama.ai/library/llama3:8b does not support tools', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2026-04-17 23:37:25,492 - GRADE_REPORTER_TOOL - OpenAI API call failed: Error code: 400 - {'error': {'message': 'registry.ollama.ai/library/llama3:8b does not support tools', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2026-04-17 23:37:25,519 - GRADE_REPORTER_TOOL - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-17 23:37:25,829 - GRADE_REPORTER_TOOL - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-17 23:37:25,831 - GRADE_REPORTER_TOOL - OpenAI API call failed: Error code: 400 - {'error': {'message': 'registry.ollama.ai/library/llama3:8b does not support tools', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2026-04-17 23:37:25,831 - GRADE_REPORTER_TOOL - OpenAI API call failed: Error code: 400 - {'error': {'message': 'registry.ollama.ai/library/llama3:8b does not support tools', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2026-04-17 23:37:25,841 - GRADE_REPORTER_TOOL - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-17 23:37:26,154 - GRADE_REPORTER_TOOL - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-04-17 23:37:26,156 - GRADE_REPORTER_TOOL - OpenAI API call failed: Error code: 400 - {'error': {'message': 'registry.ollama.ai/library/llama3:8b does not support tools', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2026-04-17 23:37:26,157 - GRADE_REPORTER_TOOL - OpenAI API call failed: Error code: 400 - {'error': {'message': 'registry.ollama.ai/library/llama3:8b does not support tools', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2026-04-18 00:02:55,386 - GRADE_REPORTER_TOOL - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:03:19,307 - GRADE_REPORTER_TOOL - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:03:19,325 - GRADE_REPORTER_TOOL - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:03:33,991 - GRADE_REPORTER_TOOL - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:03:33,992 - GRADE_REPORTER_TOOL - Starting final grading and plagiarism check for student: STU001
+2026-04-18 00:03:34,014 - GRADE_REPORTER_TOOL - Report saved: data\final_reports\STU001_final_report.md | Grade: 83.0 | Plagiarism: 36.8%
+2026-04-18 00:03:34,017 - GRADE_REPORTER_TOOL - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:03:54,662 - GRADE_REPORTER_TOOL - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:03:54,663 - GRADE_REPORTER_TOOL - OpenAI API usage: {'prompt_tokens': 1222, 'completion_tokens': 210, 'total_tokens': 1432}
+2026-04-18 00:08:17,143 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:08:30,961 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:08:30,970 - GRADE_REPORTER_TOOL - INFO - Starting final grading and plagiarism check for student: STU001
+2026-04-18 00:08:30,971 - GRADE_REPORTER_TOOL - WARNING - all_submissions received as list. Converting to empty dict.
+2026-04-18 00:08:30,975 - GRADE_REPORTER_TOOL - INFO - \u2705 Report successfully saved for STU001 | Grade: 83.0 | Plagiarism: 0.0%
+2026-04-18 00:08:30,979 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:08:41,452 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:08:41,453 - GRADE_REPORTER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 899, 'completion_tokens': 105, 'total_tokens': 1004}
+2026-04-18 00:12:34,091 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:13:10,406 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:13:10,412 - GRADE_REPORTER_TOOL - INFO - Processing final grade for student: STU001
+2026-04-18 00:13:10,420 - GRADE_REPORTER_TOOL - INFO - Report saved for STU001 \u2192 Grade: 83.0 | Plagiarism: 41.3%
+2026-04-18 00:13:10,421 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:13:17,407 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:13:17,408 - GRADE_REPORTER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 1108, 'completion_tokens': 71, 'total_tokens': 1179}
+2026-04-18 00:25:07,095 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:26:09,000 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:26:09,010 - GRADE_REPORTER_TOOL - INFO - Processing final grade for student: STU001
+2026-04-18 00:26:09,026 - GRADE_REPORTER_TOOL - INFO - Report saved for STU001 \u2192 Grade: 83.0 | Plagiarism: 41.3%
+2026-04-18 00:26:09,030 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-18 00:26:26,806 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-18 00:26:26,807 - GRADE_REPORTER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 1108, 'completion_tokens': 187, 'total_tokens': 1295}
