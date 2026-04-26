@@ -171,9 +171,7 @@ def _grade_student_direct(
         "}\n"
     )
 
-    # ──────────────────────────────────────────────────────────────────
     # TASK 2: Rubric Evaluator – LLM scores the submission per rubric
-    # ──────────────────────────────────────────────────────────────────
     print(f"  → Step 1/3: Grading against rubric ...", flush=True)
     model_text = _call_chat(
         [
@@ -196,15 +194,11 @@ def _grade_student_direct(
     if not feedback_markdown:
         feedback_markdown = "Feedback generation returned empty content. Please review submission manually."
 
-    # ──────────────────────────────────────────────────────────────────
     # TASK 3: Feedback Writer – Saves draft feedback to disk
-    # ──────────────────────────────────────────────────────────────────
     print(f"  → Step 2/3: Saving feedback ...", flush=True)
     save_draft_feedback.run(student_id=student_id, feedback_text=feedback_markdown)
 
-    # ──────────────────────────────────────────────────────────────────
     # TASK 4: Grade Reporter – Final grade + plagiarism check + report
-    # ──────────────────────────────────────────────────────────────────
     print(f"  → Step 3/3: Computing final grade & plagiarism check ...", flush=True)
     report = calculate_final_grade_and_check_plagiarism.run(
         student_id=student_id,
@@ -273,10 +267,8 @@ def run_grader(
     print("=== STAGE: Load Submissions ===")
     logging.info("Loading submissions from: %s", submissions_folder)
 
-    # ──────────────────────────────────────────────────────────────────────
     # TASK 1: File Reader – Read all submission files from the folder
     # Uses tools/file_reader_tool.py → returns {student_id: text} dict
-    # ──────────────────────────────────────────────────────────────────────
     from tools.file_reader_tool import read_submission_files
 
     all_submissions = read_submission_files.run(folder_path=submissions_folder)
