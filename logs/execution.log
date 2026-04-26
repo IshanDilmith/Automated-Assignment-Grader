@@ -70,3 +70,88 @@
 2026-04-18 00:47:23,793 - GRADE_REPORTER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
 2026-04-18 00:47:31,887 - GRADE_REPORTER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
 2026-04-18 00:47:31,888 - GRADE_REPORTER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 1108, 'completion_tokens': 83, 'total_tokens': 1191}
+2026-04-26 21:12:57,008 - FILE_READER_TOOL - INFO - Loading submissions from: data/submissions
+2026-04-26 21:12:57,010 - FILE_READER_TOOL - INFO - Starting file read from folder: data\submissions
+2026-04-26 21:12:57,011 - FILE_READER_TOOL - INFO - Loaded submission for student: STU001
+2026-04-26 21:12:57,011 - FILE_READER_TOOL - INFO - Completed file read. Total submissions loaded: 1
+2026-04-26 21:12:57,011 - FILE_READER_TOOL - INFO - Starting grading pipeline for student_id=STU001
+2026-04-26 21:12:57,012 - FILE_READER_TOOL - ERROR - Grader execution failed: 1 validation error for Crew
+verbose
+  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value=2, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.11/v/bool_parsing
+Traceback (most recent call last):
+  File "C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\main.py", line 127, in <module>
+    run_grader()
+  File "C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\main.py", line 100, in run_grader
+    crew = _build_crew()
+           ^^^^^^^^^^^^^
+  File "C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\main.py", line 53, in _build_crew
+    return Crew(
+           ^^^^^
+  File "C:\Users\legaz\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Crew
+verbose
+  Input should be a valid boolean, unable to interpret input [type=bool_parsing, input_value=2, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.11/v/bool_parsing
+2026-04-26 21:13:36,166 - FILE_READER_TOOL - INFO - Loading submissions from: data/submissions
+2026-04-26 21:13:36,166 - FILE_READER_TOOL - INFO - Starting file read from folder: data\submissions
+2026-04-26 21:13:36,166 - FILE_READER_TOOL - INFO - Loaded submission for student: STU001
+2026-04-26 21:13:36,166 - FILE_READER_TOOL - INFO - Completed file read. Total submissions loaded: 1
+2026-04-26 21:13:36,166 - FILE_READER_TOOL - INFO - Starting grading pipeline for student_id=STU001
+2026-04-26 21:13:36,588 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'read_submission_files'
+2026-04-26 21:13:55,095 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:13:55,112 - FILE_READER_TOOL - INFO - Starting file read from folder: data\submissions
+2026-04-26 21:13:55,118 - FILE_READER_TOOL - INFO - Loaded submission for student: STU001
+2026-04-26 21:13:55,118 - FILE_READER_TOOL - INFO - Completed file read. Total submissions loaded: 1
+2026-04-26 21:13:55,119 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'read_submission_files'
+2026-04-26 21:14:08,222 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:14:08,222 - FILE_READER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 627, 'completion_tokens': 127, 'total_tokens': 754}
+2026-04-26 21:14:08,252 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'load_rubric'
+2026-04-26 21:14:52,667 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:14:52,709 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'save_draft_feedback'
+2026-04-26 21:16:14,984 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:16:15,015 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-26 21:16:39,987 - FILE_READER_TOOL - INFO - Loading submissions from: data/submissions
+2026-04-26 21:16:39,987 - FILE_READER_TOOL - INFO - Starting file read from folder: data\submissions
+2026-04-26 21:16:39,987 - FILE_READER_TOOL - INFO - Loaded submission for student: STU001
+2026-04-26 21:16:39,987 - FILE_READER_TOOL - INFO - Completed file read. Total submissions loaded: 1
+2026-04-26 21:16:39,987 - FILE_READER_TOOL - INFO - Starting grading pipeline for student_id=STU001
+2026-04-26 21:16:40,039 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'read_submission_files'
+2026-04-26 21:16:41,623 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:16:41,638 - FILE_READER_TOOL - INFO - Completed grading pipeline for student_id=STU001
+2026-04-26 21:16:49,384 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:16:49,384 - FILE_READER_TOOL - INFO - Starting file read from folder: data\submissions
+2026-04-26 21:16:49,384 - FILE_READER_TOOL - INFO - Loaded submission for student: STU001
+2026-04-26 21:16:49,384 - FILE_READER_TOOL - INFO - Completed file read. Total submissions loaded: 1
+2026-04-26 21:16:49,384 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'read_submission_files'
+2026-04-26 21:17:01,863 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:17:01,863 - FILE_READER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 627, 'completion_tokens': 127, 'total_tokens': 754}
+2026-04-26 21:17:01,883 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'load_rubric'
+2026-04-26 21:17:48,263 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:17:48,302 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'save_draft_feedback'
+2026-04-26 21:18:49,935 - FILE_READER_TOOL - INFO - Loading submissions from: data/submissions
+2026-04-26 21:18:49,935 - FILE_READER_TOOL - INFO - Starting file read from folder: data\submissions
+2026-04-26 21:18:49,935 - FILE_READER_TOOL - INFO - Loaded submission for student: STU001
+2026-04-26 21:18:49,935 - FILE_READER_TOOL - INFO - Completed file read. Total submissions loaded: 1
+2026-04-26 21:18:49,935 - FILE_READER_TOOL - INFO - Starting grading pipeline for student_id=STU001
+2026-04-26 21:18:49,996 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'read_submission_files'
+2026-04-26 21:19:18,436 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:19:18,548 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-26 21:19:25,122 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:19:25,131 - FILE_READER_TOOL - INFO - Starting file read from folder: data\submissions
+2026-04-26 21:19:25,132 - FILE_READER_TOOL - INFO - Loaded submission for student: STU001
+2026-04-26 21:19:25,132 - FILE_READER_TOOL - INFO - Completed file read. Total submissions loaded: 1
+2026-04-26 21:19:25,135 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'read_submission_files'
+2026-04-26 21:19:49,295 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:19:49,309 - FILE_READER_TOOL - INFO - Completed grading pipeline for student_id=STU001
+2026-04-26 21:20:07,708 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:20:07,710 - FILE_READER_TOOL - INFO - OpenAI API usage: {'prompt_tokens': 627, 'completion_tokens': 127, 'total_tokens': 754}
+2026-04-26 21:20:07,738 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'load_rubric'
+2026-04-26 21:20:52,931 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:20:53,032 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'save_draft_feedback'
+2026-04-26 21:22:13,930 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:22:13,967 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
+2026-04-26 21:22:41,235 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-26 21:22:41,261 - FILE_READER_TOOL - INFO - Completed grading pipeline for student_id=STU001
