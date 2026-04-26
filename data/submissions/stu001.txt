@@ -1,5 +1,3 @@
-# Sample Submission (STU001)
-
 ## Introduction
 Artificial Intelligence (AI) is a branch of computer science focused on building systems that can perform tasks that normally require human intelligence, such as reasoning, perception, and learning.
 
@@ -8,4 +6,3 @@ Recent advances in deep learning have improved computer vision and natural langu
 
 ## Conclusion
 AI continues to evolve rapidly and has a growing impact on society. Responsible development and evaluation are important to ensure these systems are safe and beneficial.
-

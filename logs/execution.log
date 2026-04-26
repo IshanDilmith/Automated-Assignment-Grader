@@ -155,3 +155,181 @@ verbose
 2026-04-26 21:22:13,967 - FILE_READER_TOOL - INFO - OpenAI: Successfully validated tool 'calculate_final_grade_and_check_plagiarism'
 2026-04-26 21:22:41,235 - FILE_READER_TOOL - INFO - HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
 2026-04-26 21:22:41,261 - FILE_READER_TOOL - INFO - Completed grading pipeline for student_id=STU001
+2026-04-27 00:04:08 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:04:11 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 00:04:11 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:04:11 - INFO - Loaded submission for student: stu001
+2026-04-27 00:04:11 - INFO - Loaded submission for student: stu002
+2026-04-27 00:04:11 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 00:04:11 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 00:18:16 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:18:20 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 00:18:20 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:18:20 - INFO - Loaded submission for student: stu001
+2026-04-27 00:18:20 - INFO - Loaded submission for student: stu002
+2026-04-27 00:18:20 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 00:18:20 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 00:25:49 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:25:51 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 00:25:52 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:25:52 - INFO - Loaded submission for student: stu001
+2026-04-27 00:25:52 - INFO - Loaded submission for student: stu002
+2026-04-27 00:25:52 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 00:25:52 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 00:31:53 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:31:55 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 00:31:56 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:31:56 - INFO - Loaded submission for student: stu001
+2026-04-27 00:31:56 - INFO - Loaded submission for student: stu002
+2026-04-27 00:31:56 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 00:31:56 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 00:41:46 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 00:41:46 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:41:49 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 00:41:49 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:41:49 - INFO - Loaded submission for student: stu001
+2026-04-27 00:41:49 - INFO - Loaded submission for student: stu002
+2026-04-27 00:41:49 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 00:41:49 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 00:46:55 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 00:46:55 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:46:58 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 00:46:58 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:46:58 - INFO - Loaded submission for student: stu001
+2026-04-27 00:46:58 - INFO - Loaded submission for student: stu002
+2026-04-27 00:46:58 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 00:46:58 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 00:53:49 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 00:53:49 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:53:52 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 00:53:53 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 00:53:53 - INFO - Loaded submission for student: stu001
+2026-04-27 00:53:53 - INFO - Loaded submission for student: stu002
+2026-04-27 00:53:53 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 00:53:53 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 01:01:35 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 01:01:35 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:01:38 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 01:01:38 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:01:38 - INFO - Loaded submission for student: stu001
+2026-04-27 01:01:38 - INFO - Loaded submission for student: stu002
+2026-04-27 01:01:38 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 01:01:38 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 01:11:44 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 01:11:44 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:11:46 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 01:11:47 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:11:47 - INFO - Loaded submission for student: stu001
+2026-04-27 01:11:47 - INFO - Loaded submission for student: stu002
+2026-04-27 01:11:47 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 01:11:47 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 01:11:52 - INFO - Processing final grade for student: stu001
+2026-04-27 01:11:52 - INFO - Report saved for stu001 \u2192 Grade: 70.0 | Plagiarism: 100.0%
+2026-04-27 01:11:52 - INFO - Completed grading pipeline for student_id=stu001
+2026-04-27 01:11:52 - INFO - Starting grading pipeline for student_id=stu002
+2026-04-27 01:11:56 - INFO - Processing final grade for student: stu002
+2026-04-27 01:11:56 - INFO - Report saved for stu002 \u2192 Grade: 80.0 | Plagiarism: 100.0%
+2026-04-27 01:11:56 - INFO - Completed grading pipeline for student_id=stu002
+2026-04-27 01:21:19 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 01:21:19 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:21:22 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 01:21:22 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:21:22 - INFO - Loaded submission for student: stu001
+2026-04-27 01:21:22 - INFO - Loaded submission for student: stu002
+2026-04-27 01:21:22 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 01:21:22 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 01:23:54 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 01:23:54 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:23:57 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 01:23:57 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:23:57 - INFO - Loaded submission for student: stu001
+2026-04-27 01:23:57 - INFO - Loaded submission for student: stu002
+2026-04-27 01:23:57 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 01:23:57 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 01:28:46 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 01:28:46 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:28:49 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 01:28:49 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:28:49 - INFO - Loaded submission for student: stu001
+2026-04-27 01:28:49 - INFO - Loaded submission for student: stu002
+2026-04-27 01:28:49 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 01:28:49 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 01:37:16 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 01:37:16 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:37:18 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 01:37:19 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:37:19 - INFO - Loaded submission for student: stu001
+2026-04-27 01:37:19 - INFO - Loaded submission for student: stu002
+2026-04-27 01:37:19 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 01:37:19 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 01:45:15 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 01:45:15 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:45:18 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 01:45:18 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:45:18 - INFO - Loaded submission for student: stu001
+2026-04-27 01:45:18 - INFO - Loaded submission for student: stu002
+2026-04-27 01:45:18 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 01:45:18 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 01:54:18 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 01:54:18 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:54:20 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 01:54:21 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 01:54:21 - INFO - Loaded submission for student: stu001
+2026-04-27 01:54:21 - INFO - Loaded submission for student: stu002
+2026-04-27 01:54:21 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 01:54:21 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 01:55:51 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 01:55:51 - INFO - Loading submissions from: data/submissions
+2026-04-27 01:55:54 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 01:55:54 - INFO - Starting file read from folder: data\submissions
+2026-04-27 01:55:54 - INFO - Loaded submission for student: stu001
+2026-04-27 01:55:54 - INFO - Loaded submission for student: stu002
+2026-04-27 01:55:54 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 01:55:54 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 02:06:31 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 02:06:31 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 02:06:34 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 02:06:34 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 02:06:34 - INFO - Loaded submission for student: stu001
+2026-04-27 02:06:34 - INFO - Loaded submission for student: stu002
+2026-04-27 02:06:34 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 02:06:34 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 02:20:47 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 02:20:47 - INFO - Loading submissions from: data/submissions
+2026-04-27 02:20:50 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 02:20:50 - INFO - Starting file read from folder: data\submissions
+2026-04-27 02:20:50 - INFO - Loaded submission for student: stu001
+2026-04-27 02:20:50 - INFO - Loaded submission for student: stu002
+2026-04-27 02:20:50 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 02:20:50 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 02:20:53 - INFO - Processing final grade for student: stu001
+2026-04-27 02:29:08 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 02:29:08 - INFO - Loading submissions from: data/submissions
+2026-04-27 02:29:12 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 02:29:12 - INFO - Starting file read from folder: data\submissions
+2026-04-27 02:29:12 - INFO - Loaded submission for student: stu001
+2026-04-27 02:29:12 - INFO - Loaded submission for student: stu002
+2026-04-27 02:29:12 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 02:29:12 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 02:29:15 - INFO - Processing final grade for student: stu001
+2026-04-27 02:29:15 - INFO - Report saved for stu001 \u2192 Grade: 70.0 | Plagiarism: 100.0%
+2026-04-27 02:29:15 - INFO - Completed grading pipeline for student_id=stu001
+2026-04-27 02:29:15 - INFO - Starting grading pipeline for student_id=stu002
+2026-04-27 02:29:19 - INFO - Processing final grade for student: stu002
+2026-04-27 02:29:19 - INFO - Report saved for stu002 \u2192 Grade: 70.0 | Plagiarism: 100.0%
+2026-04-27 02:29:19 - INFO - Completed grading pipeline for student_id=stu002
+2026-04-27 02:30:17 - INFO - Ollama preflight succeeded for model=qwen2.5:7b
+2026-04-27 02:30:17 - INFO - Loading submissions from: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 02:30:20 - INFO - Using config path: C:\Users\legaz\.config\crewai\settings.json
+2026-04-27 02:30:21 - INFO - Starting file read from folder: C:\Users\legaz\OneDrive\Documents\GitHub\Automated Assignment Grader\data\submissions
+2026-04-27 02:30:21 - INFO - Loaded submission for student: stu001
+2026-04-27 02:30:21 - INFO - Loaded submission for student: stu002
+2026-04-27 02:30:21 - INFO - Completed file read. Total submissions loaded: 2
+2026-04-27 02:30:21 - INFO - Starting grading pipeline for student_id=stu001
+2026-04-27 02:30:24 - INFO - Processing final grade for student: stu001
+2026-04-27 02:30:24 - INFO - Report saved for stu001 \u2192 Grade: 80.0 | Plagiarism: 100.0%
+2026-04-27 02:30:24 - INFO - Completed grading pipeline for student_id=stu001
+2026-04-27 02:30:24 - INFO - Starting grading pipeline for student_id=stu002
+2026-04-27 02:30:27 - INFO - Processing final grade for student: stu002
+2026-04-27 02:30:27 - INFO - Report saved for stu002 \u2192 Grade: 70.0 | Plagiarism: 100.0%
+2026-04-27 02:30:27 - INFO - Completed grading pipeline for student_id=stu002

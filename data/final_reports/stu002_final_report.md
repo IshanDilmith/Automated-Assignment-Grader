@@ -1,14 +1,14 @@
-# FINAL GRADING REPORT - stu001
-Generated on: 2026-04-27 02:30:24
+# FINAL GRADING REPORT - stu002
+Generated on: 2026-04-27 02:30:27
 
-## Final Grade: 80.0/100
+## Final Grade: 70.0/100
 
 ## Rubric Breakdown:
 {
   "Content": 30,
   "Structure": 25,
   "Research": 15,
-  "Writing": 10
+  "Writing": 0
 }
 
 ## Plagiarism Analysis:
@@ -20,7 +20,7 @@ Detailed comparison:
 }
 
 ## Teacher Feedback:
-The student has addressed the content, structure, research, and writing aspects of the paper. However, some parts could be improved for clarity and organization.
+The student has addressed the content, structure, research, and writing aspects of the paper. However, some points could be improved for clarity and organization.
 
 ## Recommendation:
 ⚠️ HIGH PLAGIARISM DETECTED - Please investigate

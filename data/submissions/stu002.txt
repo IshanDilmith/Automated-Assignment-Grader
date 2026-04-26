@@ -1,0 +1,8 @@
+## Introduction
+Artificial Intelligence (AI) is a branch of computer science focused on building systems that can perform tasks that normally require human intelligence, such as reasoning, perception, and learning.
+
+## Discussion
+Recent advances in deep learning have improved computer vision and natural language processing. For example, transformer-based models have enabled more accurate text generation and summarization.
+
+## Conclusion
+AI continues to evolve rapidly and has a growing impact on society. Responsible development and evaluation are important to ensure these systems are safe and beneficial.

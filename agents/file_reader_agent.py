@@ -1,3 +1,5 @@
+import os
+
 from crewai import Agent, LLM
 
 from tools.file_reader_tool import read_submission_files
@@ -5,7 +7,7 @@ from tools.file_reader_tool import read_submission_files
 
 # local Ollama configuration pattern
 ollama_llm = LLM(
-    model="ollama/qwen2.5:7b",
+    model=os.getenv("OLLAMA_MODEL", "qwen2.5:7b"),
     base_url="http://localhost:11434",
     api_key="ollama",
     temperature=0.1,
@@ -24,7 +26,7 @@ def create_file_reader_agent() -> Agent:
         ),
         tools=[read_submission_files],
         llm=ollama_llm,
-        verbose=True,
+        verbose=False,
         allow_delegation=False,
-        max_iter=5,
+        max_iter=2,
     )

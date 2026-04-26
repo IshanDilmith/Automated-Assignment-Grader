@@ -1,14 +1,17 @@
-from crewai import Agent
-from crewai import LLM
+import os
+
+from crewai import Agent, LLM
+
 from tools.reporter_tool import calculate_final_grade_and_check_plagiarism
 
-# local Ollama configuration pattern
+
 ollama_llm = LLM(
-    model="ollama/qwen2.5:7b",        # ← Change here
+    model=os.getenv("OLLAMA_MODEL", "qwen2.5:7b"),
     base_url="http://localhost:11434",
     api_key="ollama",
-    temperature=0.2                    # Lower temperature = more reliable for grading
+    temperature=0.2,
 )
+
 
 def create_grade_reporter_agent():
     return Agent(
@@ -23,7 +26,7 @@ def create_grade_reporter_agent():
         ),
         tools=[calculate_final_grade_and_check_plagiarism],
         llm=ollama_llm,
-        verbose=True,
+        verbose=False,
         allow_delegation=False,
-        max_iter=8
+        max_iter=2,
     )

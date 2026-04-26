@@ -1,9 +1,11 @@
+import os
+
 from crewai import Agent, LLM
 from tools.feedback_tool import save_draft_feedback
 
 # local Ollama configuration pattern
 ollama_llm = LLM(
-    model="ollama/qwen2.5:7b",
+    model=os.getenv("OLLAMA_MODEL", "qwen2.5:7b"),
     base_url="http://localhost:11434",
     api_key="ollama",
     temperature=0.2,
@@ -25,9 +27,9 @@ def create_feedback_writer_agent() -> Agent:
         ),
         llm=ollama_llm,
         tools=[save_draft_feedback],
-        verbose=True,
+        verbose=False,
         allow_delegation=False,
-        max_iter=5,
+        max_iter=2,
     )
 
 

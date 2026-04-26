@@ -33,5 +33,4 @@ grade_reporter_task = Task(
     ),
     agent=grade_reporter_agent,
     context=[feedback_writer_task, rubric_evaluator_task],
-    output_json=True,
 )

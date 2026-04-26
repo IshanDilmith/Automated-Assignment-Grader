@@ -1,61 +1,71 @@
 # Automated Assignment Grader
 
-## Project Info
-Automated Assignment Grader is a Python project that uses agent/task/tool modules
-to generate assignment feedback and support grading workflows, including plagiarism
-similarity support.
+A lightweight Python framework for generating assignment feedback, evaluating
+submissions against a rubric, and producing final grading reports. The project
+is organized around small, testable agents, tasks, and tools so components are
+easy to extend or reuse.
 
-## Prerequisites
-- Python 3.9+ (Recommended Python 3.12.x)
-- `pip`
-- [Ollama](https://ollama.com/) installed and running locally
+Key features
+- Generate draft feedback and finalize reports
+- Evaluate submissions against a JSON rubric
+- Simple, testable agent/task/tool structure
 
-After installing Ollama, pull the model used by this project:
+Prerequisites
+- Python 3.9+ (3.12 recommended)
+- pip
+- Optional: Ollama (for local LLMs) if you want to run models locally
+
+Quick start
+1. Create and activate a virtual environment:
+
+```bash
+python -m venv .venv
+.\.venv\Scripts\activate
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. (Optional) If using Ollama, pull the desired model locally. Example:
 
 ```bash
 ollama pull qwen2.5:7b
 ```
 
-This project is configured to use:
+Running the project
+- Run the main entrypoint:
 
 ```bash
-ollama/qwen2.5:7b
+python main.py
 ```
 
-If you need a smaller local model, you can substitute a lighter Ollama model in the agent configuration.
+- Individual tasks and agents can be exercised via the `tasks/` and `agents/`
+	modules for development and testing.
 
-If you have less RAM, you can use:
+Project layout
+- `main.py` — project entrypoint
+- `agents/` — agent implementations (feedback writer, rubric evaluator, etc.)
+- `tasks/` — task definitions and wiring
+- `tools/` — helper utilities (file IO, reporting, rubric helpers)
+- `data/` — sample data, rubrics, submissions, and generated reports
+- `tests/` — unit tests
+
+Testing
+- Run unit tests with `pytest`:
 
 ```bash
-ollama pull phi3:medium
+python -m pytest
 ```
 
-## Install Dependencies
-From the project root, install packages:
+Contributing
+- Feel free to open issues or PRs. Follow the existing test patterns in
+	`tests/` when adding features.
 
-```bash
-pip install crewai langchain-community ollama
-pip install pandas numpy scikit-learn
-```
+License
+- See the repository license or add one as appropriate for your project.
 
-## Run Tests
-You can run the feedback writer test with:
-
-```bash
-python tests/test_feedback_writer.py
-```
-
-Or run all tests (if `pytest` is installed):
-
-```bash
-python -m pytest tests
-```
-
-## Project Structure
-- `main.py`: Entrypoint script.
-- `agents/`: Agent implementations.
-- `tasks/`: Task definitions.
-- `tools/`: Supporting tools/utilities.
-- `tests/`: Test files.
-- `data/feedbacks/`: Output/sample feedback files.
-- `logs/`: Log artifacts.
+If you'd like, I can also add a short example showing how to run a specific
+agent (for example `feedback_writer_agent`) or update `requirements.txt`.

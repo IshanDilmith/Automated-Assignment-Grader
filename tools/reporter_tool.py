@@ -3,8 +3,6 @@ from pathlib import Path
 from datetime import datetime
 import json
 
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 from crewai.tools import tool
 
 # Logging for observability
@@ -48,13 +46,14 @@ def calculate_final_grade_and_check_plagiarism(
 
         if submission_text and submission_text.strip() and len(all_submissions) > 1:
             try:
-                texts = [submission_text] + list(all_submissions.values())
-                vectorizer = TfidfVectorizer(stop_words='english', min_df=1)
-                tfidf_matrix = vectorizer.fit_transform(texts)
-                similarity_matrix = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:])
+                from difflib import SequenceMatcher
 
-                for i, other_id in enumerate(all_submissions.keys()):
-                    plagiarism_scores[other_id] = round(float(similarity_matrix[0][i]) * 100, 1)
+                for other_id, other_text in all_submissions.items():
+                    if not other_text or not other_text.strip():
+                        plagiarism_scores[other_id] = 0.0
+                        continue
+                    ratio = SequenceMatcher(None, submission_text, other_text).ratio()
+                    plagiarism_scores[other_id] = round(ratio * 100, 1)
 
                 avg_plagiarism = round(sum(plagiarism_scores.values()) / len(plagiarism_scores), 1)
             except Exception as e:

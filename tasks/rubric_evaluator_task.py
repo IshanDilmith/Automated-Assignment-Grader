@@ -43,5 +43,4 @@ rubric_evaluator_task = Task(
     ),
     agent=rubric_evaluator_agent,
     context=[file_reader_task],
-    output_json=True,
 )

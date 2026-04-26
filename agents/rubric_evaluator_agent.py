@@ -1,3 +1,5 @@
+import os
+
 from crewai import Agent, LLM
 
 from tools.rubric_tool import load_rubric
@@ -5,7 +7,7 @@ from tools.rubric_tool import load_rubric
 
 # local Ollama configuration pattern
 ollama_llm = LLM(
-    model="ollama/qwen2.5:7b",
+    model=os.getenv("OLLAMA_MODEL", "qwen2.5:7b"),
     base_url="http://localhost:11434",
     api_key="ollama",
     temperature=0.2,
@@ -25,7 +27,7 @@ def create_rubric_evaluator_agent() -> Agent:
         ),
         tools=[load_rubric],
         llm=ollama_llm,
-        verbose=True,
+        verbose=False,
         allow_delegation=False,
-        max_iter=5,
+        max_iter=2,
     )

@@ -34,5 +34,4 @@ feedback_writer_task = Task(
     expected_output=(
         "A strict JSON object with student_id, criterion_feedback, feedback_text, and tool_status."
     ),
-    output_json=True,
 )
