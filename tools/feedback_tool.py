@@ -1,8 +1,8 @@
 from crewai.tools import tool
 import os
-from typing import Dict
 
-@tool("Save Draft Feedback")
+
+@tool("save_draft_feedback")
 def save_draft_feedback(student_id: str, feedback_text: str) -> str:
     """
     Saves the draft feedback as a markdown file and returns the full file path.

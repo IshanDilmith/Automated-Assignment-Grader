@@ -2,7 +2,7 @@ from crewai import Agent
 from crewai import LLM
 from tools.reporter_tool import calculate_final_grade_and_check_plagiarism
 
-# Use a model that actually supports tools
+# local Ollama configuration pattern
 ollama_llm = LLM(
     model="ollama/qwen2.5:7b",        # ← Change here
     base_url="http://localhost:11434",

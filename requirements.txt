@@ -1,9 +1,3 @@
-Install Ollama + pull model: ollama pull qwen2.5:7b (or phi3:medium if you have less RAM).
-
-pip install crewai langchain-community ollama
-pip install pandas numpy scikit-learn   # for plagiarism similarity
-
 crewai
 scikit-learn
-pandas
-numpy
+pytest

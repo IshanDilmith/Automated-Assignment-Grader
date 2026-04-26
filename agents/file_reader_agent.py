@@ -3,7 +3,7 @@ from crewai import Agent, LLM
 from tools.file_reader_tool import read_submission_files
 
 
-# Use a tool-capable local Ollama model.
+# local Ollama configuration pattern
 ollama_llm = LLM(
     model="ollama/qwen2.5:7b",
     base_url="http://localhost:11434",
