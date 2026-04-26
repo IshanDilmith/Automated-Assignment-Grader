@@ -1,0 +1,22 @@
+{
+  "name": "Default Rubric (Sample)",
+  "total_points": 100,
+  "criteria": {
+    "Content": {
+      "max_points": 30,
+      "description": "Relevance, accuracy, and depth of the topic coverage."
+    },
+    "Structure": {
+      "max_points": 25,
+      "description": "Logical flow, clear introduction/body/conclusion, and organization."
+    },
+    "Research": {
+      "max_points": 20,
+      "description": "Evidence of research, citations, and source quality."
+    },
+    "Writing": {
+      "max_points": 25,
+      "description": "Grammar, clarity, tone, and formatting."
+    }
+  }
+}

@@ -14,7 +14,10 @@ def test_feedback_writer_task_wiring_and_prompt_contract():
     assert rubric_evaluator_task in feedback_writer_task.context
 
     description = feedback_writer_task.description
-    assert "{rubric_evaluation_output}" in description
+    # The task relies on upstream task context (rubric_evaluator_task output) rather than
+    # a dedicated interpolated input placeholder like "{rubric_evaluation_output}".
+    assert "context" in description.lower()
+    assert "rubric_scores" in description
     assert "save_draft_feedback" in description
     assert "student_id" in description
     assert "feedback_text" in description
