@@ -1,11 +1,8 @@
 from crewai import Task
-
 from agents.rubric_evaluator_agent import create_rubric_evaluator_agent
 from tasks.file_reader_task import file_reader_task
 
-
 rubric_evaluator_agent = create_rubric_evaluator_agent()
-
 
 rubric_evaluator_task = Task(
     description=(
@@ -23,11 +20,12 @@ rubric_evaluator_task = Task(
         "Total: 100 points\n\n"
         "Step 1: Call the tool 'load_rubric' exactly once with rubric_path.\n"
         "Step 2: Use the loaded rubric to evaluate the submission fairly.\n"
-        "Step 3: Return STRICT JSON only (no markdown, no extra text) in this structure:\n"
+        "Step 3: Call the tool 'save_rubric_justification' with the student_id and the justification dictionary you prepared.\n"
+        "Step 4: Return STRICT JSON only (no markdown, no extra text) in this structure:\n"
         "{\n"
         '  "student_id": "<id>",\n'
-        '  "rubric_scores": {"Content": 0, "Structure": 0, "Research": 0, "Writing": 0},\n'
-        '  "total": 0,\n'
+        '  "rubric_scores": {"Content": "<int>", "Structure": "<int>", "Research": "<int>", "Writing": "<int>"},\n'
+        '  "total": "<sum_of_scores>",\n'
         '  "justification": {\n'
         '    "Content": "<why this score>",\n'
         '    "Structure": "<why this score>",\n'

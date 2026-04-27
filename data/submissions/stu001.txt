@@ -1,8 +1,19 @@
-## Introduction
-Artificial Intelligence (AI) is a branch of computer science focused on building systems that can perform tasks that normally require human intelligence, such as reasoning, perception, and learning.
+1. Introduction
+The rapid scaling requirements of modern e-commerce platforms often push traditional software architectures to their limits. This report analyzes the technical viability of shifting from a monolithic architecture to a microservices-based approach for high-traffic retail systems. The primary objective is to evaluate how modularizing backend services impacts system scalability and fault tolerance.
 
-## Discussion
-Recent advances in deep learning have improved computer vision and natural language processing. For example, transformer-based models have enabled more accurate text generation and summarization.
+2. Analysis of the Monolithic Approach
+Traditionally, e-commerce platforms are built as monoliths where the user interface, database access layer, and business logic (e.g., inventory, cart, checkout) are unified in a single codebase.
 
-## Conclusion
-AI continues to evolve rapidly and has a growing impact on society. Responsible development and evaluation are important to ensure these systems are safe and beneficial.
+Advantages: This approach simplifies early-stage development, testing, and deployment.
+
+Limitations: As the application grows, the monolith becomes rigid. A minor update to the "Order Management" module requires redeploying the entire application, which increases the risk of system-wide downtime.
+
+3. The Microservices Paradigm
+Microservices architecture decomposes the application into loosely coupled, independently deployable services organized around specific business capabilities.
+
+Scalability: Services can be scaled independently. During a major sale event, the "Payment Processing" and "Product Catalog" microservices can be allocated more resources without needing to scale the less demanding "User Profile" service.
+
+Fault Isolation: If the "Recommendation Engine" service fails, the rest of the application, such as the checkout process, remains operational.
+
+4. Conclusion
+While microservices introduce complexities in data consistency and network latency, the architectural style is highly recommended for enterprise e-commerce platforms. The ability to deploy updates independently and isolate faults ensures the high availability required in competitive digital retail environments.

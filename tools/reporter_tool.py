@@ -18,7 +18,8 @@ def calculate_final_grade_and_check_plagiarism(
     submission_text: str,
     rubric_scores: dict,
     feedback_text: str,
-    all_submissions: dict | list
+    all_submissions: dict | list,
+    justification: dict = None
 ) -> dict:
     """
     Final tool for Grade Reporter Agent.
@@ -41,25 +42,43 @@ def calculate_final_grade_and_check_plagiarism(
             all_submissions = {}
 
         # 3. Plagiarism check
-        plagiarism_scores = {}
+        plagiarism_details = {}
         avg_plagiarism = 0.0
 
-        if submission_text and submission_text.strip() and len(all_submissions) > 1:
+        if submission_text and submission_text.strip() and isinstance(all_submissions, dict) and len(all_submissions) > 1:
             try:
                 from difflib import SequenceMatcher
+                total_ratio = 0.0
+                comparisons = 0
 
                 for other_id, other_text in all_submissions.items():
-                    if not other_text or not other_text.strip():
-                        plagiarism_scores[other_id] = 0.0
+                    # Skip self-comparison
+                    if other_id == student_id:
                         continue
+                    
+                    if not other_text or not other_text.strip():
+                        plagiarism_details[other_id] = 0.0
+                        continue
+                        
                     ratio = SequenceMatcher(None, submission_text, other_text).ratio()
-                    plagiarism_scores[other_id] = round(ratio * 100, 1)
+                    score = round(ratio * 100, 1)
+                    plagiarism_details[other_id] = score
+                    total_ratio += score
+                    comparisons += 1
 
-                avg_plagiarism = round(sum(plagiarism_scores.values()) / len(plagiarism_scores), 1)
+                if comparisons > 0:
+                    avg_plagiarism = round(total_ratio / comparisons, 1)
             except Exception as e:
                 logging.error(f"Plagiarism calculation error: {e}")
 
+        # Update return dict key name for clarity if needed, but keeping plagiarism_scores for backward compatibility in report content
+        plagiarism_scores = plagiarism_details
+
         # 4. Create report
+        justification_block = ""
+        if justification:
+            justification_block = f"## Score Justification:\n{json.dumps(justification, indent=2)}\n\n"
+
         report_content = f"""# FINAL GRADING REPORT - {student_id}
 Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
@@ -68,7 +87,7 @@ Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 ## Rubric Breakdown:
 {json.dumps(rubric_scores, indent=2)}
 
-## Plagiarism Analysis:
+{justification_block}## Plagiarism Analysis:
 Average similarity: {avg_plagiarism}%
 Detailed comparison:
 {json.dumps(plagiarism_scores, indent=2)}
@@ -97,6 +116,7 @@ Report generated automatically by Grade Reporter Agent.
             "student_id": student_id,
             "final_grade": final_grade,
             "rubric_scores": rubric_scores,
+            "justification": justification,
             "avg_plagiarism": avg_plagiarism,
             "plagiarism_details": plagiarism_scores,
             "report_path": str(report_path),

@@ -16,9 +16,10 @@ grade_reporter_task = Task(
         "- student_id\n"
         "- submission_text\n"
         "- rubric_scores (from rubric evaluator JSON)\n"
+        "- justification (from rubric evaluator JSON)\n"
         "- feedback_text (from feedback writer JSON)\n"
         "- all_submissions (from kickoff input)\n\n"
-        "Call tool 'calculate_final_grade_and_check_plagiarism' exactly once with those values.\n"
+        "Call tool 'calculate_final_grade_and_check_plagiarism' exactly once with those values, including the justification.\n"
         "Return STRICT JSON only:\n"
         "{\n"
         '  "student_id": "<id>",\n'

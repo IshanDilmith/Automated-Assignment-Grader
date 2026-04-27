@@ -137,6 +137,7 @@ def _grade_student_direct(
       4. Grade Reporter     – Calculates final grade, runs plagiarism check, saves report
     """
     from tools.feedback_tool import save_draft_feedback
+    from tools.justification_tool import save_rubric_justification
     from tools.reporter_tool import calculate_final_grade_and_check_plagiarism
 
     rubric_raw = Path(rubric_path).read_text(encoding="utf-8")
@@ -157,7 +158,7 @@ def _grade_student_direct(
 
     system_prompt = (
         "You are a strict academic grader. "
-        "Return ONLY valid JSON with keys: rubric_scores, feedback_markdown. "
+        "Return ONLY valid JSON with keys: rubric_scores, justification, feedback_markdown. "
         "No extra text before or after the JSON."
     )
     user_prompt = (
@@ -166,8 +167,9 @@ def _grade_student_direct(
         f"Submission:\n{submission_text}\n\n"
         "Return JSON in this exact shape:\n"
         "{\n"
-        f'  "rubric_scores": {json.dumps(score_template)},\n'
-        '  "feedback_markdown": "criterion-by-criterion feedback with clear suggestions"\n'
+        f'  "rubric_scores": {json.dumps({k: "<score_integer>" for k in score_keys})},\n'
+        f'  "justification": {json.dumps({k: "<why_this_score>" for k in score_keys})},\n'
+        '  "feedback_markdown": "detailed feedback here"\n'
         "}\n"
     )
 
@@ -182,6 +184,7 @@ def _grade_student_direct(
     )
     parsed = _extract_json_block(model_text)
     raw_scores = parsed.get("rubric_scores", {})
+    justification = parsed.get("justification", {})
 
     scores: dict[str, int] = {}
     for key, config in criteria.items():
@@ -195,8 +198,9 @@ def _grade_student_direct(
         feedback_markdown = "Feedback generation returned empty content. Please review submission manually."
 
     # TASK 3: Feedback Writer – Saves draft feedback to disk
-    print(f"  → Step 2/3: Saving feedback ...", flush=True)
+    print(f"  → Step 2/3: Saving feedback & justification ...", flush=True)
     save_draft_feedback.run(student_id=student_id, feedback_text=feedback_markdown)
+    save_rubric_justification.run(student_id=student_id, justification=justification)
 
     # TASK 4: Grade Reporter – Final grade + plagiarism check + report
     print(f"  → Step 3/3: Computing final grade & plagiarism check ...", flush=True)
@@ -206,6 +210,7 @@ def _grade_student_direct(
         rubric_scores=scores,
         feedback_text=feedback_markdown,
         all_submissions=all_submissions,
+        justification=justification,
     )
     print(f"  ✓ Student {student_id} grading complete.", flush=True)
     return report if isinstance(report, dict) else {"student_id": student_id, "status": "failed"}

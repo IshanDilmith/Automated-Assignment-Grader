@@ -1,9 +1,7 @@
 import os
-
 from crewai import Agent, LLM
-
 from tools.rubric_tool import load_rubric
-
+from tools.justification_tool import save_rubric_justification
 
 # local Ollama configuration pattern
 ollama_llm = LLM(
@@ -12,7 +10,6 @@ ollama_llm = LLM(
     api_key="ollama",
     temperature=0.2,
 )
-
 
 def create_rubric_evaluator_agent() -> Agent:
     """Create the Rubric Evaluator Agent for analyzing student submissions."""
@@ -25,7 +22,7 @@ def create_rubric_evaluator_agent() -> Agent:
             "You analyze submissions based on content, structure, research quality, and writing clarity. "
             "You always provide a justification for the marks you assign and never deviate from the provided rubric."
         ),
-        tools=[load_rubric],
+        tools=[load_rubric, save_rubric_justification],
         llm=ollama_llm,
         verbose=False,
         allow_delegation=False,
