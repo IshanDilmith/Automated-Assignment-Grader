@@ -1,14 +1,14 @@
 # RUBRIC SCORE JUSTIFICATION
 
 ## Content
-The report provides a comprehensive analysis of customer sentiment, highlighting both positive and negative feedback.
+The report provides a comprehensive analysis of customer sentiment, highlighting the positive and negative feedback. The content is well-structured with clear introduction, body, and conclusion.
 
 ## Structure
-The structure includes logical flow, clear introduction/body/conclusion, and organization.
+Logical flow, clear introduction/body/conclusion, and organization
 
 ## Research
-Evidence of research is provided through survey responses and customer feedback.
+Evidence of research, citations, and source quality
 
 ## Writing
-Grammar, clarity, tone, and formatting are all well-executed.
+Grammar, clarity, tone, and formatting
 
