@@ -7,15 +7,24 @@ import os
 import json
 import re
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any, Dict, TYPE_CHECKING
 from urllib import error, request
 
 import sys
+from dotenv import load_dotenv
 
 # Ensure stdout/stderr use UTF-8 on Windows consoles to avoid "charmap" encoding errors
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
     sys.stderr.reconfigure(encoding="utf-8")
+
+# Load local environment variables from a .env file for development convenience.
+# This is safe because .env should be gitignored; use real env vars in production/CI.
+load_dotenv()
+
+if TYPE_CHECKING:
+    # Import Crew only for type checking to satisfy linters (avoids runtime import requirements)
+    from crewai import Crew
 
 def _configure_logging() -> None:
     """Set up project logging to logs/execution.log."""

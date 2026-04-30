@@ -1,3 +1,4 @@
 crewai
 scikit-learn
 pytest
+python-dotenv

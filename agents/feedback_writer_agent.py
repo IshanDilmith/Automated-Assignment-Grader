@@ -7,7 +7,7 @@ from tools.feedback_tool import save_draft_feedback
 ollama_llm = LLM(
     model=os.getenv("OLLAMA_MODEL", "qwen2.5:7b"),
     base_url="http://localhost:11434",
-    api_key="ollama",
+    api_key=os.getenv("OLLAMA_API_KEY", "ollama"),
     temperature=0.2,
 )
 
