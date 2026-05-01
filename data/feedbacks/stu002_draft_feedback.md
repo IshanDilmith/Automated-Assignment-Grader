@@ -1,1 +1,0 @@
-The report provides a detailed analysis of customer sentiment, highlighting the positive and negative feedback. The content is well-structured with clear introduction, body, and conclusion.

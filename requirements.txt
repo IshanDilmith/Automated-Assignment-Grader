@@ -2,3 +2,5 @@ crewai
 scikit-learn
 pytest
 python-dotenv
+python-docx
+PyPDF2

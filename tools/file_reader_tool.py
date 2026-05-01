@@ -13,7 +13,45 @@ logging.basicConfig(
     format="%(asctime)s - FILE_READER_TOOL - %(levelname)s - %(message)s",
 )
 
-SUPPORTED_EXTENSIONS = {".txt", ".md", ".py"}
+SUPPORTED_EXTENSIONS = {".txt", ".md", ".py", ".pdf", ".docx", ".doc"}
+
+
+def extract_text_from_pdf(path: Path) -> str:
+    try:
+        import PyPDF2
+    except Exception:
+        logging.error("PyPDF2 not installed; cannot extract text from PDF: %s", path.name)
+        return ""
+
+    try:
+        with path.open("rb") as fh:
+            reader = PyPDF2.PdfReader(fh)
+            texts = []
+            for page in reader.pages:
+                try:
+                    txt = page.extract_text() or ""
+                except Exception:
+                    txt = ""
+                texts.append(txt)
+            return "\n".join(texts).strip()
+    except Exception as e:
+        logging.error("Failed to extract PDF text for %s: %s", path.name, e)
+        return ""
+
+
+def extract_text_from_docx(path: Path) -> str:
+    try:
+        import docx
+    except Exception:
+        logging.error("python-docx not installed; cannot extract text from DOCX: %s", path.name)
+        return ""
+
+    try:
+        doc = docx.Document(str(path))
+        return "\n".join(p.text for p in doc.paragraphs).strip()
+    except Exception as e:
+        logging.error("Failed to extract DOCX text for %s: %s", path.name, e)
+        return ""
 
 
 @tool("read_submission_files")
@@ -45,14 +83,35 @@ def read_submission_files(folder_path: str) -> Dict[str, str]:
         if not file_path.is_file() or file_path.suffix.lower() not in SUPPORTED_EXTENSIONS:
             continue
 
-        try:
-            text = file_path.read_text(encoding="utf-8").strip()
-        except UnicodeDecodeError:
-            # Fallback for rare cases where files are saved in a legacy encoding.
-            text = file_path.read_text(encoding="latin-1").strip()
+        suffix = file_path.suffix.lower()
+        text = ""
+        if suffix in {".txt", ".md", ".py"}:
+            try:
+                text = file_path.read_text(encoding="utf-8").strip()
+            except UnicodeDecodeError:
+                # Fallback for rare cases where files are saved in a legacy encoding.
+                text = file_path.read_text(encoding="latin-1").strip()
 
-        if not text:
-            logging.warning("Skipping empty submission file: %s", file_path.name)
+            if not text:
+                logging.warning("Skipping empty submission file: %s", file_path.name)
+                continue
+
+        elif suffix == ".pdf":
+            text = extract_text_from_pdf(file_path)
+            if not text:
+                logging.warning("No text extracted from PDF submission: %s", file_path.name)
+                # continue to next file (skip if extraction failed)
+                continue
+
+        elif suffix == ".docx":
+            text = extract_text_from_docx(file_path)
+            if not text:
+                logging.warning("No text extracted from DOCX submission: %s", file_path.name)
+                continue
+
+        else:
+            # .doc and other binary doc formats are not supported for extraction
+            logging.warning("Skipping unsupported binary submission format: %s", file_path.name)
             continue
 
         student_id = file_path.stem

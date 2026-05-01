@@ -1,1 +1,0 @@
-The report effectively analyzes the technical viability of microservices-based architecture for e-commerce platforms. However, it could benefit from a more detailed explanation of the architectural style and its advantages over traditional monolithic architectures.
