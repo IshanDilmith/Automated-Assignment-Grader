@@ -23,7 +23,6 @@ dist/
 htmlcov/
 
 # Logs and runtime files
-logs/
 *.log
 
 # IDEs and editors
